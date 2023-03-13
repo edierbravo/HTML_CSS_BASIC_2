@@ -57,44 +57,44 @@ small: aplica una apariencia de texto reducido en tamaño.
 \</head>
 
 \<body>
-    <header> <!--Sección superior de nuestro website--> 
+  <header> <!--Sección superior de nuestro website--> 
 
-      <nav></nav> <!--Sección de navegación de nuestro website, siempre dentro del header-->
+    <nav></nav> <!--Sección de navegación de nuestro website, siempre dentro del header-->
 
-    </header>
+  </header>
 
-    <main> <!--Main es el contenido central de nuestro website, "la parte del medio"-->
+  <main> <!--Main es el contenido central de nuestro website, "la parte del medio"-->
 
-      <section> 
-        <!--Nuestro website puede estar divido por secciones, por ejemplo platzi tiene 3: El navegador de cursos y rutas, el feed y nuestras rutas de aprendizaje-->
+    <section> 
+      <!--Nuestro website puede estar divido por secciones, por ejemplo platzi tiene 3: El navegador de cursos y rutas, el feed y nuestras rutas de aprendizaje-->
 
-        <article>
-          <!--Contenido independiente de la página. Es reutilizable-->
-        </article>
+      <article>
+        <!--Contenido independiente de la página. Es reutilizable-->
+      </article>
 
-      </section>
+    </section>
 
-      <ul> <!--Lista desordenada: Sin numerar-->
+    <ul> <!--Lista desordenada: Sin numerar-->
 
-        <li><!--Item List. Elementos de la lista--></li>
+      <li><!--Item List. Elementos de la lista--></li>
 
-      </ul>
+    </ul>
 
-      <ol></ol> <!--Lista ordenada: Numerada-->
-      
-    </main>
+    <ol></ol> <!--Lista ordenada: Numerada-->
+    
+  </main>
 
-    <footer> <!--Sección final de nuestro website-->
+  <footer> <!--Sección final de nuestro website-->
 
-    </footer>
+  </footer>
 
-    <p>Soy un texto</p> <!--Párrafo, texto-->
+  <p>Soy un texto</p> <!--Párrafo, texto-->
 
-    <h1>Soy un titulo</h1> 
-    <!--Títulos, muestran el texto más grande y con negrilla. Existen desde el h1 al h6-->
+  <h1>Soy un titulo</h1> 
+  <!--Títulos, muestran el texto más grande y con negrilla. Existen desde el h1 al h6-->
 
-    <a href="#">Soy un link</a>
-    <!--Enlaces/links que nos permitirán movernos entre páginas.-->
+  <a href="#">Soy un link</a>
+  <!--Enlaces/links que nos permitirán movernos entre páginas.-->
 
 </body>
 
@@ -148,6 +148,101 @@ Si el navegador no puede leer algun formato se puede hjacer de la siguiente form
     <source src="./video.mp4#t=3,8" />
     <source src="./video.m4v#t=3,8" />
 </video>
+```
+
+## Formularios
+
+##### text, date, time, calendar, submit
+
+[Input](https://developer.mozilla.org/es/docs/Web/HTML/Element/input) y todas sus caracteristicas
+
+Forma no esperada pero valida
+
+- type: tipo de entrada
+
+- placeholder: Permite mostrar que es lo que se espera escribir en la caja de texto
+
+
+
+```
+<div>
+    <input type="text">
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="date" id="inicio-platzi">
+    <input type="time" id="horario">
+</div>
+```
+
+Forma deseada y correcta
+
+- span: pregunta o informacion del formulario
+
+- autocomplete: autocompleta el formulario
+
+- required: campo obligatorio
+
+- type="datetime-local": fecha con hora
+
+```
+<form action="">
+    <label for="pais">
+        <span>Tu pais</span>
+        <input type="text" name="pais" id="pais" autocomplete="country" required>
+    </label>
+    <label for="nombre">
+        <span>Cual es tu nombre</span>
+        <input type="text" id="nombre" placeholder="Nombre">
+    </label>
+    <label for="inicio-platzi">
+        <span>dia que comensaste en platzi</span>
+        <input type="date" id="inicio-platzi">
+    </label>
+    <label for="horario">
+        <span>tu horario</span>
+        <input type="time" id="horario">
+    </label>
+    <label for="calendar">
+        <span>Tu Cumpleaños</span>
+        <input type="datetime-local" name="calendar" id="calendar" autocomplete="postal-code" required />
+    </label>
+</form>
+```
+
+##### Select
+
+Forma no deseada, no apta para el usuario
+```
+<select name="" id="">
+    <option value="js">JS</option>
+    <option value="html5">HTML5</option>
+    <option value="ccs3">CSS3</option>
+</select>
+```
+
+Forma deseada: te permite elegir entre una lista y si quieres escribir te sugiere la opcion mas recomendada
+
+```
+<input list="cursos">
+<datalist id="cursos">
+    <option value="js"></option>
+    <option value="html5"></option>
+    <option value="ccs3"></option>
+    <option value="web standar"></option>
+</datalist>
+```
+
+##### Button
+
+value: texto que aparece en el boton
+
+```
+<input type="submit" value="Nombre">
+```
+
+type: tipo de boton
+
+```
+<button type="submit">Nombre boton</button>
 ```
 
 
