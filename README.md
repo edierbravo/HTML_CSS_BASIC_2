@@ -404,7 +404,7 @@ Por otra parte los estilos llamados por `<link>` se leen de la misma manera, si 
 
 ## Combinadores
 
-Nos permite combinar multiple selectores y crar mayor especicidad
+Nos permite combinar multiple selectores y crear mayor especicidad
 
 ##### Hermano cercano o adyacente
 
@@ -456,6 +456,7 @@ El width siempre debe ser relativo para buenas practicas
 
 - %
 - em : elemento
+
     Toma un tamaño de fuente de 1.5 veces del tamaño de fuente heredado o padre directo
     ```
     .text-container {
@@ -463,6 +464,7 @@ El width siempre debe ser relativo para buenas practicas
     }
     ```
 - rem (root em) : root elemento
+
     Toma un tamaño de fuente de 1 veces del tamaño de root
     ```
     p {
@@ -478,6 +480,7 @@ El width siempre debe ser relativo para buenas practicas
     ```
 - max-width / max-height
 - min-width / min height
+
     El tamaño de la section es del 80% pero en ancho no crecera mas de 500px ni reducira menos de 320px
     ```
     section {
@@ -488,6 +491,7 @@ El width siempre debe ser relativo para buenas practicas
     ```
 - vw (viewport width)
 - vh (viewport height)
+
     El main va a tener un ancho y altura del 100% de la pantalla
     ```
     main {
