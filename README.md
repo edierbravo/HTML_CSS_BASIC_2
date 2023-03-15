@@ -4,6 +4,12 @@
 
 # Estructura basica de HTML
 
+Enlaces importantes
+
+[HTML: Lenguaje de etiquetas de hipertexto](https://developer.mozilla.org/es/docs/Web/HTML)
+
+[Referencia de Elementos HTML](https://developer.mozilla.org/es/docs/Web/HTML/Element)
+
 ## Etiquetas de HTML
 
 - article: diferencia partes del contenido que pueden vivir por sí mismas.
@@ -244,5 +250,252 @@ type: tipo de boton
 ```
 <button type="submit">Nombre boton</button>
 ```
+
+# ESTILOS CSS
+
+[mozilla.org](https://developer.mozilla.org/en-US/docs/Learn/CSS) [w3schools.com](https://www.w3schools.com/css/default.asp) enlaces importantes 
+
+[](https://www.w3schools.com/css/default.asp)
+Tener en cuenta los Flexbox y CSS Grid que sirve para alinear. CSS permite hacer animaciones y response (adaptar la pagina Web a cualquer tamaño de pantalla)
+
+Tienen dos parametros:
+
+- Selector:
+    - por etiqueta:
+
+        div
+    {
+    ...
+    }
+
+    - por ID:
+
+        #identificador
+    {
+    ...
+    }
+    
+    - por clase:
+
+        .clase
+    {
+    ...
+    }
+    
+    - por atributo:
+
+        [width="500"]
+    {
+    ...
+    }
+    
+- Propiedades: dan estilo a la pagina web
+
+
+###### No olvidar el estilo general
+```
+* {
+margin: 0;
+adding: 0; 
+box-sizing:border-box; 
+}
+```
+
+##### Seudo clases (Agregar `:class`) 
+
+Definen el estilo de un estado especial de un elemento
+
+- Cambiar de color al tener el cursor encima
+
+```
+.main-nav__item a:hover {
+    color:rgb(174, 0, 255);
+}
+```
+
+- Cambiar color al dar click encima
+```
+
+.main-nav__item a:active {
+    color: red;
+}
+```
+
+##### Seudo elementos (Agregar `::element`) 
+
+Definen el estilo de una parte especifica de un elemento
+
+- Agrega **-** despues del elemento
+
+```
+.main-nav__item a::after {
+    content: " -";
+}
+```
+
+## Modelo de caja
+
+Todo se trata de cajas a los que le puedo colocar estilos
+
+- margin: espacio externo a la caja
+
+- border: dorde de la caja
+
+- padding: espacio interno de la caja
+
+- content: contenido ya sea imagen, video, texto, ...
+
+- width: largo del contenido
+
+- height: alto del contenido
+
+- top, bottom, left, right: para posicionar el contenido
+
+Se recomienda hacer esta configuracion a todo 
+
+`box-sizing:border-box` permite que no se haga scroll horizontalmente al agregar borde y padding, pero no aplica a el margin.
+
+```
+* {
+  margin: "0";
+  padding: "0";
+  box-sizing:border-box;
+}
+```
+
+## Herencia
+ Las clases padres heredan sus caracteristicas a sus clases hijas
+ 
+- inherit: valor en los atributos de css para que herede caracteristicas de la clase padre
+
+## Importancia de propiedades CSS
+
+1 mas importante, 3 menos importante
+
+1. Estilos de navegador
+2. Nuestros estilos
+3. Nuestros estilos declarados con `!important`
+
+## Especifidad
+
+Las clases son genericas pero los id son unicos
+
+1 mas especificos, 5 menos esfecifico. Entre mas especifico sera el estilo aplicado
+
+1. `!important` es el mas importante **10000**
+
+2. estilos enbebidos (estilos en la estiqueta `<style>` de html) **01000**
+
+3. #id **00100**
+
+4. .class **00010**
+
+5. tag o selectores de html **00001**
+
+Si tengo un estilo aplicado a #id y .class el codigo es **00110**, esto es mas importante que solo #id
+
+## Orden de las fuentes
+
+No es buena parctica utilizar **estilos enbebidos**, llamar estilos por **id** y usar **`!important`**
+
+Si hay conflictos en estilos, siempre se toma el ultimo. El archivo .css se lee de arriba hacia abajo, los ultimos estilos pueden reescribir a los primeros en caso de conflictos
+
+Por otra parte los estilos llamados por `<link>` se leen de la misma manera, si hay mas de un llamado a archivos .css, los ultimos reescriben a los primeros en caso de conflictos
+
+## Combinadores
+
+Nos permite combinar multiple selectores y crar mayor especicidad
+
+##### Hermano cercano o adyacente
+
+Aplica color red a **p** que este cercano (justo despues de **h2**) a **h2**
+```
+h2 + p {
+    color: red;
+}
+```
+##### Hermano general
+
+Aplica color rojo a **p** que este al lado  de **h2**, no importa si no esta contiguo ya que todos son hermanos generales
+
+```
+h2 ~ p {
+    color: red;
+}
+```
+
+##### Hermano hijo
+
+Aplica color rojo a **p** que sea hija directa de **div**
+
+```
+div > p {
+    color: red;
+}
+```
+
+##### Hermano desendiente
+
+Aplica color rojo a **p** que este dentro de **div**
+
+```
+div p {
+    color: red;
+}
+```
+
+## Medidas
+
+##### absolutas
+
+- px
+
+##### Relativas
+
+El width siempre debe ser relativo para buenas practicas
+
+- %
+- em : elemento
+    Toma un tamaño de fuente de 1.5 veces del tamaño de fuente heredado o padre directo
+    ```
+    .text-container {
+        font-size: 1.5em;
+    }
+    ```
+- rem (root em) : root elemento
+    Toma un tamaño de fuente de 1 veces del tamaño de root
+    ```
+    p {
+        font-size: 1rem;
+    }
+    ```
+
+    Para que un rem sea 10px usamos
+    ```
+    html {
+        font-size: 62.5%;
+    }
+    ```
+- max-width / max-height
+- min-width / min height
+    El tamaño de la section es del 80% pero en ancho no crecera mas de 500px ni reducira menos de 320px
+    ```
+    section {
+        width: 80%;
+        min-width: 320px;
+        max-width: 500px;
+    }
+    ```
+- vw (viewport width)
+- vh (viewport height)
+    El main va a tener un ancho y altura del 100% de la pantalla
+    ```
+    main {
+        width: 100vw;
+        height: 100vw;
+    }
+    ```
+
+
 
 
