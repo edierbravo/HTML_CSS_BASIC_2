@@ -64,34 +64,23 @@ small: aplica una apariencia de texto reducido en tamaño.
 
 \<body>
   <header> <!--Sección superior de nuestro website--> 
-
     <nav></nav> <!--Sección de navegación de nuestro website, siempre dentro del header-->
-
   </header>
 
   <main> <!--Main es el contenido central de nuestro website, "la parte del medio"-->
-
     <section> 
       <!--Nuestro website puede estar divido por secciones, por ejemplo platzi tiene 3: El navegador de cursos y rutas, el feed y nuestras rutas de aprendizaje-->
-
       <article>
         <!--Contenido independiente de la página. Es reutilizable-->
       </article>
-
     </section>
-
     <ul> <!--Lista desordenada: Sin numerar-->
-
       <li><!--Item List. Elementos de la lista--></li>
-
     </ul>
-
     <ol></ol> <!--Lista ordenada: Numerada-->
-    
   </main>
 
   <footer> <!--Sección final de nuestro website-->
-
   </footer>
 
   <p>Soy un texto</p> <!--Párrafo, texto-->
@@ -101,7 +90,6 @@ small: aplica una apariencia de texto reducido en tamaño.
 
   <a href="#">Soy un link</a>
   <!--Enlaces/links que nos permitirán movernos entre páginas.-->
-
 </body>
 
 ```
@@ -499,7 +487,70 @@ El width siempre debe ser relativo para buenas practicas
         height: 100vw;
     }
     ```
+## Position (static, absolute, relative, fixed, sticky)
 
+Todas las etiquetas vienen por defecto en `position: static`, en este caso no podemos usar bottom, left and right.
 
+En **absolute** el objeto pierde la posocion.
 
+En **relative** podemos usar bottom, left and right.
 
+## Display
+
+`display: block` utiliza el 100% del espacio
+
+`dispaly: inline` si hay espacio lo coloca en linea. Ademas no permite colocar padding, ni margin en la parte de arriba y abajo, ni width, ni height
+
+`display: inline-block` si hay espacio permite width, height, margin, padding
+
+**flex**
+
+[flex csss](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) parametros de display:flex
+
+justify-content: permite centar horizontalmente
+
+flex-wrap: permite que cuando la pantalla es muy pequeña, el contenido baje
+
+**Flexbox**
+
+`align-items: center` alicia verticalmente al centro
+
+`align-items: flex-end` y ` align-items: flex-start` alinian el contenido abajo y arriba respectivamente. 
+
+`align-items: stretch` si no se coloca altura definida, el contenedor crece en altura del contenedor padre. El ancho esta limitado con el contenido de cada contenedor
+
+`align-items: baseline` el contenedor se limita al contenido del mismo siempre y cuando no tenga altura ni ancho definido.
+
+`border: 1` para el contenedor a la posicion 1, los contenedores sin la propiedad border pasa al inicio y de ahi empieza el orden.
+
+`flex-grow: 1` el contenedor con esta propiedad crece 1 unidad mas, es decir crece el espacio sobrante.
+
+`flex-basis: 30rem` ancho base para wrap, si el contenedor ya es mas pequeño que ese tamaño pasa abajo, siempre y cuando este activada la propiedad `flex-wrap: wrap`
+
+## Variables
+
+Las variables se decalran como se muestra a continuacion, siempre colocar dos guiones al inicio
+
+```
+:root {
+    --primary-color: #003476;
+    --secundary-color: #7274fc;
+    --header-size: 4rem;
+    --font: 1.8rem;
+}
+```
+
+Para usarlas se usa: `var(--primary-color)`
+
+## Font
+
+[Google Fonts](https://fonts.google.com/) para descargar fuentes para tu proyecto
+
+Existen fuentes genericas que son las que ya vienen incorporadas en el computador
+
+- serif: time new roman, georgia
+- sans-serif: helvetica, verdana
+- cursive
+- monospace: courier new, roboto mono
+
+Se recomienda solo cargar una fuente en nuestro proyecto e importarlas siempre desde la etiqueta head
