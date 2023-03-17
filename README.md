@@ -51,6 +51,8 @@ small: aplica una apariencia de texto reducido en tamaño.
 
 - figure: le da un contexto semántico a las imágenes.
 
+![Tabla etiquetas HTML]()
+
 ## Estructura basica  de HTML
 
 ```
@@ -607,10 +609,36 @@ Carga una imagen diferente segun el width de la pantalla, colocar de mayor a men
 </picture>
 ```
 
+## Label, Alt, Title
+
+El **for** de la etiqueta **label** debe ser igual al **id** de la etiqueta **input** para que cuando le de click al contenido del **span** en la pagina web, te señale de una el campo donde debo ingresar el dato
+
+```
+ <label for="time-to-study">
+    <span>¿En que horario estudias?</span>
+    <input type="time" id="time-to-study">
+</label>
+```
+
+**alt** permite colocar un texto que se mostrara cuando no carga la imagen y ayudar a personas con problemas de vision. **title** permite mostrar un texto cuando tengo el cursor sobre la imagen
+
+```
+<img 
+src="./img.jpg" 
+alt="Foto del atardecer en una ciudad" 
+title="Foto del atardecer en una ciudad">
+```
+
+
+
 # Recomendaciones
 
 - Un archivo por cada break point, un break point es un ntamaño especifico de pantalla en la cual deseo posicionar el contenido de mi pagina o aplicativo web. En [MyDevice](https://www.mydevice.io/) úedo ver los diferentes tamaños de dispositivos del mercado
 
+- Siempre se debe usar textos con medidas relativas como lo es rem
 
+Asi debe ser una pagina WEB
+
+![modelo](https://raw.githubusercontent.com/edierbra/HTML_CSS_BASIC_2/master/images/htmlEsquema.png?token=GHSAT0AAAAAAB7YKLVONOOA44HLUPZBKKX4ZAUX6SA)
 
 ### Sigue aprendiendo  ❤️ Programar es mas que un estilo de vida
