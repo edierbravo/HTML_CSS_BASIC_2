@@ -6,6 +6,10 @@
 
 Enlaces importantes
 
+[Notas de otro estudiante](https://johncardenasp.notion.site/Curso-definitivo-de-HTML-y-CSS-7196d473c6b046d2b8de4a0edaa82dc6)
+
+[Tabla de etiquetas](https://allthetags.com/)
+
 [HTML: Lenguaje de etiquetas de hipertexto](https://developer.mozilla.org/es/docs/Web/HTML)
 
 [Referencia de Elementos HTML](https://developer.mozilla.org/es/docs/Web/HTML/Element)
@@ -155,8 +159,6 @@ Forma no esperada pero valida
 - type: tipo de entrada
 
 - placeholder: Permite mostrar que es lo que se espera escribir en la caja de texto
-
-
 
 ```
 <div>
@@ -497,11 +499,11 @@ En **relative** podemos usar bottom, left and right.
 
 ## Display
 
-`display: block` utiliza el 100% del espacio
+`display: block` utiliza el 100% del espacio width
 
-`dispaly: inline` si hay espacio lo coloca en linea. Ademas no permite colocar padding, ni margin en la parte de arriba y abajo, ni width, ni height
+`dispaly: inline` si hay espacio lo coloca en linea. Ademas no permite colocar padding, ni margin en la parte de arriba y abajo, ni width, ni height ya que ocupa el espacio del contenido
 
-`display: inline-block` si hay espacio permite width, height, margin, padding
+`display: inline-block` si hay espacio disponible permite width, height, margin, padding ya que ocupa el espacio del elemento
 
 **flex**
 
@@ -554,3 +556,61 @@ Existen fuentes genericas que son las que ya vienen incorporadas en el computado
 - monospace: courier new, roboto mono
 
 Se recomienda solo cargar una fuente en nuestro proyecto e importarlas siempre desde la etiqueta head
+
+## Responsive Design
+
+**Mobile First / Only**
+
+[Learn Responsive Design](https://web.dev/learn/design/)
+
+Se inicia siempore desde pantallas mas pequeñas a mas grandes. Se colocan al final del style.css y solo los estilos que se van a modificar
+
+```
+@media (min-width: 480px){
+    ...
+}
+
+@media (min-width: 720px){
+    ...
+}
+
+@media (min-width: 1024px){
+    ...
+}
+```
+
+Tambiuen se puede colocar en el head de HTML y es la mejor opcion. Igualmente se usa de menor tamaño de pantalla a mayor tamaño de pantalla
+
+```
+<link href="style.css" rel="stylesheet"> <!--Estilo pra mobile-->
+
+<link href="tablet.css" rel="stylesheet" media="screen and (min-width: 768px)">
+```
+
+**Mostly Fluid**
+
+Se trata de ir reacomodando el contenido de la pagina web segun el tamaño de la pantalla
+
+**Column Drop**
+
+Se basa en romper la columna e ir modificando los elementos segun corresponda a medida que aumenta el tamaño de pantalla
+
+**Resposive Imagenes**
+
+Carga una imagen diferente segun el width de la pantalla, colocar de mayor a menor width
+
+```
+<picture>
+    <source media="(min-width:500px)" srcset="./3.jpg"/>
+    <source media="(min-width: 00px)" srcset="./2.jpg"/>
+    <img src="./1.jpg" alt="Img 1"/>
+</picture>
+```
+
+# Recomendaciones
+
+- Un archivo por cada break point, un break point es un ntamaño especifico de pantalla en la cual deseo posicionar el contenido de mi pagina o aplicativo web. En [MyDevice](https://www.mydevice.io/) úedo ver los diferentes tamaños de dispositivos del mercado
+
+
+
+### Sigue aprendiendo  ❤️ Programar es mas que un estilo de vida
