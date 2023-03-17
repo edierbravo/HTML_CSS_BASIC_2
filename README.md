@@ -51,7 +51,7 @@ small: aplica una apariencia de texto reducido en tamaño.
 
 - figure: le da un contexto semántico a las imágenes.
 
-![Tabla etiquetas HTML](https://raw.githubusercontent.com/edierbra/HTML_CSS_BASIC_2/master/images/tablaetiquetas.webp?token=GHSAT0AAAAAAB7YKLVPHRQUNLWSMT2T63JEZAUZCVA)
+![Tabla etiquetas HTML](https://github.com/edierbra/HTML_CSS_BASIC_2/blob/master/images/tablaetiquetas.webp)
 
 ## Estructura basica  de HTML
 
