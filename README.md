@@ -51,7 +51,7 @@ small: aplica una apariencia de texto reducido en tamaño.
 
 - figure: le da un contexto semántico a las imágenes.
 
-![Tabla etiquetas HTML]()
+![Tabla etiquetas HTML](https://raw.githubusercontent.com/edierbra/HTML_CSS_BASIC_2/master/images/tablaetiquetas.webp?token=GHSAT0AAAAAAB7YKLVPHRQUNLWSMT2T63JEZAUZCVA)
 
 ## Estructura basica  de HTML
 
@@ -639,6 +639,6 @@ title="Foto del atardecer en una ciudad">
 
 Asi debe ser una pagina WEB
 
-![modelo](https://raw.githubusercontent.com/edierbra/HTML_CSS_BASIC_2/master/images/htmlEsquema.png?token=GHSAT0AAAAAAB7YKLVONOOA44HLUPZBKKX4ZAUX6SA)
+![modelo](https://github.com/edierbra/HTML_CSS_BASIC_2/blob/master/images/htmlEsquema.png)
 
 ### Sigue aprendiendo  ❤️ Programar es mas que un estilo de vida
