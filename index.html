@@ -1,52 +1,76 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Esta pagina tendra informacion de gatos" />
-    <meta name="robots" content="index,follow" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My page</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+<html>
 
-<body>
-    <header>
-        <nav></nav>
-    </header>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+        <link rel="stylesheet" href="css/style.css"/>
+        <title>linkin Park</title>
+    </head>
 
-    <main>
-        <section>
-            <h1>Esto es una receta</h1>
+    <body>
+        <header>
+            <div class="image-container" id="logo">
+                <img src="images\logo.png" alt="logo" />
+            </div>
+        </header>
+
+        <section id="hero">
+            <div class="image-container" id="banda">
+                <img src="images\banda.jpg" alt="banda" />
+            </div>
+
+            <div class="informacion-contenedor">
+                <div class="image-container" id="foto">
+                    <img src="images/foto.jpeg" />
+                </div>
+
+                <div class="informacion">
+                    <h1>Chester Bennington</h1>
+                    <span>@Chester</span>
+                    <p>Ex vocalista de la banda de Linkin Park que murio el 20 de julio de 2017</p>
+                </div>
+            </div>  
         </section>
 
-        <section>
-            <ul>
-                <li>Carnes</li>
-                    <ol>
-                        <li>Pollo</li>
-                        <li>Res</li>
-                    </ol>
-                <li>Verduras</li>
-                <ol>
-                    <li>Tomate</li>
-                    <li>Lechuga</li>
-                </ol>
-                <li>Frutas</li>
-                <ol>
-                    <li>banano</li>
-                    <li>
-                        <a href="https://www.google.com/search?q=receta+manzana&oq=receta+manzana&aqs=chrome..69i57j0i512l9.4485j1j7&sourceid=chrome&ie=UTF-8">Manzana</a>
-                    </li>
-                </ol>
+        <main>
+            <p>Chester Charles Bennington Johnson, llamado siempre Chester Bennington, 
+            fue un cantante, compositor y actor estadounidense, reconocido por ser el 
+            vocalista de bandas como Linkin Park y Dead By Sunrise. Nació el 20 de marzo 
+            de 1976 en Phoenix, Arizona, y fue hijo de Lee Russell Bennington y Susan 
+            Elaine Johnson.
+            </p>
+
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/edierbra/" target="_blank" class="social-icon" id="linkend">
+                        <img src="images\icon\linkend.png" alt="linkend">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/edierbra/" class="social-icon" id="github">
+                        <img src="images\icon\github.png" alt="github">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/?lang=es" class="social-icon" id="twiter">
+                        <img src="images\icon\twiter.png" alt="twiter">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.youtube.com/" class="social-icon" id="youtube">
+                        <img src="images\icon\youtube.png" alt="youtube">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/" class="social-icon" id="facebook">
+                        <img src="images\icon\facebook.png" alt="facebook">
+                    </a>
+                </li>
             </ul>
-            
-        </section>
-    </main>
-    <footer>
-        <p>Creado por Edier</p>
-    </footer>
-
-</body>
+        </main>
+    </body>
 </html>
-
